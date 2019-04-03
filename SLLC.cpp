@@ -13,7 +13,8 @@ void tambahDepan(int x){
     baru->x = x;
     if (head==NULL){
         head=tail=baru;
-    }else{
+    }
+	else{
     baru->next = head;
     head=baru;
     }
@@ -26,7 +27,8 @@ void tambahBelakang(int x){
 	baru->x=x;
 	if(head==null){
 		head=tail=baru;
-	}else{
+	}
+	else{
 		tail->next=baru;
 		tail=baru;
 	}
@@ -40,7 +42,8 @@ void hapusDepan(int x){
         if (head==tail){
             free(head);
             head=NULL;
-        }else{
+        }
+	    else{
             baru=head;
             head=head->next;
             free(baru);
@@ -73,6 +76,7 @@ void hapusBelakang(int x){
 int main(){
 	
     hapusDepan(7);
+    hapusBelakang(19);
 	
 	
 	
@@ -81,9 +85,9 @@ int main(){
 	
 	
 	
-	cout<<"          ================================================="<<endl;
-	cout<<"          =.........Tugas Pemrograman Terstruktur.........="<<endl;
-	cout<<"          ================================================="<<endl;
+	cout<<"          =================================================="<<endl;
+	cout<<"          =.........Tugas Pemrograman Terstruktur..........="<<endl;
+	cout<<"          =================================================="<<endl;
 	cout<<"          =                                                ="<<endl;
 	cout<<"          =  Nama :  Suci Hikmawati        (1817051033)    ="<<endl;
 	cout<<"          =          Annisa Nurwalikadani  (1817051037)    ="<<endl;
@@ -92,7 +96,6 @@ int main(){
 	cout<<"          =                                                ="<<endl;
 	cout<<"          =================================================="<<endl;
 	cout<<endl<<endl<<endl<<endl;
-    
     
     lihatLL();
     return 0;
