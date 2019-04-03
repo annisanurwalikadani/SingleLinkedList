@@ -69,12 +69,18 @@ void hapusBelakang(int x){
 	}
 }
 
-//hapusNodeTertentu
 
 //MenampilkanData
+void lihatLL(){
+    baru=head;
+    while(baru!=NULL){
+        cout<<baru->x;
+        baru=baru->next;
+    }
+    cout<<"\n";
+}
 
 int main(){
-	
     hapusDepan(7);
     hapusBelakang(19);
 	
@@ -97,6 +103,5 @@ int main(){
 	cout<<"          =================================================="<<endl;
 	cout<<endl<<endl<<endl<<endl;
     
-    lihatLL();
     return 0;
 }
