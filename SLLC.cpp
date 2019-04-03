@@ -5,7 +5,7 @@ using namespace std;
 struct data{
 	int x;
 	struct data* next;
-} *head=NULL, *baru, *tail;
+} *head=NULL, *baru, *tail,new node;
 
 //tambahDepan
 void tambahDepan(int x){
@@ -68,7 +68,17 @@ void hapusBelakang(int x){
 		}
 	}
 }
-
+//hapusNodeTertentu
+void hapusNodeTertentu(int x){
+	node *baru=new node;
+	node *tail=new node;
+	baru=head;
+	for(int i=1; i<x; i++){
+		tail=baru;
+		baru=baru->next;
+	}
+	tail->next=baru->next;
+}
 
 //MenampilkanData
 void lihatLL(){
