@@ -32,6 +32,8 @@ void tambahBelakang(int x){
 	}
 	tail->next=null;
 }
+//tambahNodeTertentu
+
 //hapusdepan
 void hapusDepan(int x){
     if (head!=NULL){
@@ -45,6 +47,28 @@ void hapusDepan(int x){
         }
     }
 }
+//hapusBelakang
+void hapusBelakang(int x){
+	if (head!=NULL){
+		if(head==tail){
+			free(head);
+			head=NULL;
+		}
+		else{
+			baru=head;
+			while(baru->next!=tail){
+				baru=baru->next;
+			}
+			free(tail);
+			tail=baru;
+			tail->next=NULL;
+		}
+	}
+}
+
+//hapusNodeTertentu
+
+//MenampilkanData
 
 int main(){
 	
@@ -72,4 +96,4 @@ int main(){
     
     lihatLL();
     return 0;
-
+}
