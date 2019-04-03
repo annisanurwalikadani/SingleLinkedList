@@ -67,18 +67,9 @@ void hapusBelakang(int x){
 			tail->next=NULL;
 		}
 	}
-}
+
+	
 //hapusNodeTertentu
-void hapusNodeTertentu(int x){
-	node *baru=new node;
-	node *tail=new node;
-	baru=head;
-	for(int i=1; i<x; i++){
-		tail=baru;
-		baru=baru->next;
-	}
-	tail->next=baru->next;
-}
 
 //MenampilkanData
 void lihatLL(){
