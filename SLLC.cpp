@@ -46,3 +46,11 @@ void hapusDepan(int x){
     }
 }
 
+int main(){
+	
+    hapusDepan(7);
+    
+    
+    lihatLL();
+    return 0;
+
