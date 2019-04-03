@@ -49,6 +49,25 @@ void hapusDepan(int x){
 int main(){
 	
     hapusDepan(7);
+	
+	
+	
+	
+	
+	
+	
+	
+	cout<<"          ================================================="<<endl;
+	cout<<"          =.........Tugas Pemrograman Terstruktur.........="<<endl;
+	cout<<"          ================================================="<<endl;
+	cout<<"          =                                                ="<<endl;
+	cout<<"          =  Nama :  Suci Hikmawati        (1817051033)    ="<<endl;
+	cout<<"          =          Annisa Nurwalikadani  (1817051037)    ="<<endl;
+	cout<<"          =          Syela Septania        (1817051058)    ="<<endl;
+	cout<<"          =          Rika Ningtias Azhari  (1817051073)    ="<<endl;
+	cout<<"          =                                                ="<<endl;
+	cout<<"          =================================================="<<endl;
+	cout<<endl<<endl<<endl<<endl;
     
     
     lihatLL();
