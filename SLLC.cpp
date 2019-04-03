@@ -19,3 +19,16 @@ void tambahDepan(int x){
     }
     tail->next = NULL;
 }
+
+//tambahbelakang
+void tambahBelakang(int x){
+	baru= (struct data*) malloc(sizeof(struct data));
+	baru->x=x;
+	if(head==null){
+		head=tail=baru;
+	}else{
+		tail->next=baru;
+		tail=baru;
+	}
+	tail->next=null;
+}
