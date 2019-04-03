@@ -32,3 +32,17 @@ void tambahBelakang(int x){
 	}
 	tail->next=null;
 }
+//hapusdepan
+void hapusDepan(int x){
+    if (head!=NULL){
+        if (head==tail){
+            free(head);
+            head=NULL;
+        }else{
+            baru=head;
+            head=head->next;
+            free(baru);
+        }
+    }
+}
+
