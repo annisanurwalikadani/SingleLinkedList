@@ -81,24 +81,25 @@ void hapusDepan(int x){
         }
     }
 }
+
 //hapusBelakang
 void hapusBelakang(int x){
-	if (head!=NULL){
-		if(head==tail){
-			free(head);
-			head=NULL;
-		}
-		else{
-			baru=head;
-			while(baru->next!=tail){
-				baru=baru->next;
-			}
-			free(tail);
-			tail=baru;
-			tail->next=NULL;
-		}
-	}
-	
+    if(head!=NULL){
+        if(head==tail){
+            free(head);
+            head=NULL;
+    }else{
+        baru=head;
+        while(baru->next!=tail){
+            baru=baru->next;
+        }
+        free(tail);
+        tail=baru;
+        tail->next = NULL;
+        }
+    }
+}
+
 //hapusTengah
 void hapusTengah(int x){
 	data *hapus = new data;
