@@ -34,7 +34,38 @@ void tambahBelakang(int x){
 	}
 	tail->next=null;
 }
-//tambahNodeTertentu
+
+//tambahTengah
+void tambahTengah(int dataBaru, int dataSebelum){
+	data *nodeBaru, *bantu, *batas;
+	int cek = 1;
+	nodeBaru = new data;
+	nodeBaru->x = dataBaru;
+	nodeBaru->next = nodeBaru;
+	bantu = head;
+	if(head->x==dataSebelum){
+		nodeBaru->next = head;
+		head = nodeBaru;
+		tail->next = head;
+		cout << "Data Baru Masuk\n";
+	}
+	else{
+		while((bantu->next)->x!=dataSebelum){
+			bantu = bantu->next;
+			if(bantu==tail){
+				cek = 0;
+				break;
+			}
+		}
+		if(cek==0)
+			cout << "data tidak ditemukan\n";
+		else{
+			batas = bantu->next;
+			bantu->next = nodeBaru;
+			nodeBaru->next = batas;
+		}
+	}
+}
 
 //hapusdepan
 void hapusDepan(int x){
@@ -67,9 +98,18 @@ void hapusBelakang(int x){
 			tail->next=NULL;
 		}
 	}
-
 	
-//hapusNodeTertentu
+//hapusTengah
+void hapusTengah(int x){
+	data *hapus = new data;
+	data *bantu = new data;
+	hapus = head;
+	for(int i=1; i<x; i++){
+		bantu = hapus;
+		hapus = hapus->next;
+	}
+	bantu->next = hapus->next;
+}
 
 //MenampilkanData
 void lihatLL(){
@@ -82,15 +122,16 @@ void lihatLL(){
 }
 
 int main(){
-    hapusDepan(7);
-    hapusBelakang(19);
-	
-	
-	
-	
-	
-	
-	
+	tambahDepan(7);
+    	tambahDepan(6);
+    	tambahBelakang(8);
+    	tambahDepan(5);
+    	tambahBelakang(9);
+    	tambahBelakang(10);
+    	tambahBelakang(11);
+    	hapusDepan(7);
+    	hapusBelakang(11);
+    	tambahTengah(3,9);
 	
 	cout<<"          =================================================="<<endl;
 	cout<<"          =.........Tugas Pemrograman Terstruktur..........="<<endl;
@@ -103,6 +144,8 @@ int main(){
 	cout<<"          =                                                ="<<endl;
 	cout<<"          =================================================="<<endl;
 	cout<<endl<<endl<<endl<<endl;
+	
+	lihatLL();
     
     return 0;
 }
