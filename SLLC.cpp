@@ -5,7 +5,7 @@ using namespace std;
 struct data{
 	int x;
 	struct data* next;
-} *head=NULL, *baru, *tail,new node;
+} *head=NULL, *baru, *tail;
 
 //tambahDepan
 void tambahDepan(int x){
@@ -25,14 +25,14 @@ void tambahDepan(int x){
 void tambahBelakang(int x){
 	baru= (struct data*) malloc(sizeof(struct data));
 	baru->x=x;
-	if(head==null){
+	if(head==NULL){
 		head=tail=baru;
 	}
 	else{
 		tail->next=baru;
 		tail=baru;
 	}
-	tail->next=null;
+	tail->next=NULL;
 }
 
 //tambahTengah
